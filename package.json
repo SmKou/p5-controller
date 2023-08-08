@@ -1,7 +1,6 @@
 {
-  "name": "node",
-  "version": "1.0.0",
-  "description": "",
+  "name": "p5-controller",
+  "description": "hub of practice sketches",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=development",
@@ -31,5 +30,8 @@
     "webpack": "^5.0.0",
     "webpack-cli": "^5.0.0",
     "webpack-dev-server": "^4.0.0"
+  },
+  "dependencies": {
+    "p5": "^1.7.0"
   }
 }
