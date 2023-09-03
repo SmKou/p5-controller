@@ -9,3 +9,5 @@ import { setApp, sketch } from './sketch';
 const container = document.getElementById('app');
 setApp(500, 500);
 new p5(sketch, container);
+
+const dropdown = document.getElementById('dropdown');
