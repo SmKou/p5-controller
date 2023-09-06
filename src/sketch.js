@@ -1,20 +1,17 @@
-import { getBox } from './state/Settings';
-const getSketch = () => { }
-let reset;
+import Settings from './state/Settings';
+
+export const Sketch = {
+    getSketch: () => ({})
+}
 
 export function sketch(p) {
     p.setup = function () {
-        p.createCanvas(getBox().width, getBox().height);
-        getSketch.settings(p);
+        const { width, height } = Settings.getBox;
+        p.createCanvas(width, height);
+        Sketch.getSketch.settings(p);
     }
     p.draw = function () {
         p.background(255);
-        getSketch.render(p);
+        Sketch.getSketch.render(p);
     }
-    reset = p.reset();
-}
-
-export const Sketch = {
-    reset,
-    getSketch
 }

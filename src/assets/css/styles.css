@@ -204,10 +204,22 @@ pre, code { background: #CCC }
 /* Template sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* skeleton: container */ main {
+select {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 0 auto;
+    height: 3.2rem;
+    outline: none;
+    border: none;
+    border-bottom: 0.1rem solid black;
+    color: #222;
+    background: #fff;
+    font-size: 2.4rem;
 }
 
-/* Messages and Notices
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#app {
+    width: 100%;
+    height: calc(100vh - 3.2rem);
+    margin-top: 3.2rem;
+}

@@ -1,4 +1,4 @@
-import { getBox } from '../state/Settings'
+import Settings from '../state/Settings'
 import Vector from '../structs/vector'
 
 const web = {
@@ -17,24 +17,26 @@ const settings = (p) => {
 const color = () => [Math.random() * 255, Math.random() * 255, Math.random() * 255, Math.random()]
 
 const create = () => {
-    const { width, height } = getBox();
-    web.top = Vector(Math.random() * width, Math.random() * height / 2);
-    web.left = Vector(Math.random() * width / 2, Math.random() * height);
-    web.right = Vector((width / 2) + Math.random() * width / 2, Math.random() * height);
-    web.bottom = Vector(Math.random() * width, (height / 2) + Math.random() * height / 2);
+    const { width, height } = Settings.getBox;
+    const { vector } = Vector;
+    web.top = vector(Math.random() * width, Math.random() * height / 2);
+    web.left = vector(Math.random() * width / 2, Math.random() * height);
+    web.right = vector((width / 2) + Math.random() * width / 2, Math.random() * height);
+    web.bottom = vector(Math.random() * width, (height / 2) + Math.random() * height / 2);
 }
 
 const move = () => {
-    const { width, height } = getBox();
+    const { width, height } = Settings.getBox;
     const lowerY = web.left.y < web.right.y ? web.left.y : web.right.y;
     const higherY = lowerY === web.left.y ? web.right.y : web.left.y;
     const lowerX = web.top.x < web.bottom.x ? web.top.x : web.bottom.x;
     const higherX = lowerX === web.top.x ? web.bottom.x : web.top.x;
 
-    web.top = Vector(Math.random() * width, Math.random() * lowerY);
-    web.bottom = Vector(Math.random() * width, higherY + Math.random() * (height - higherY));
-    web.left = Vector(Math.random() * lowerX, Math.random() * height);
-    web.right = Vector(higherX + Math.random() * (width - higherX), Math.random() * height);
+    const { vector } = Vector;
+    web.top = vector(Math.random() * width, Math.random() * lowerY);
+    web.bottom = vector(Math.random() * width, higherY + Math.random() * (height - higherY));
+    web.left = vector(Math.random() * lowerX, Math.random() * height);
+    web.right = vector(higherX + Math.random() * (width - higherX), Math.random() * height);
 }
 
 const render = (p) => {
@@ -49,7 +51,9 @@ const render = (p) => {
     );
 }
 
-export const Web = {
+const Web = {
     settings,
     render
 }
+
+export default Web;

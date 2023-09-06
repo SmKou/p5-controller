@@ -1,8 +1,11 @@
-// export getBox and set it to setBox(width, height)
-const setBox = ({ width, height }) => () => ({ width, height })
-const getBox = () => { }
-
-export default settings = {
+const setBox = (width) => (height) => {
+    getBox.width = width;
+    getBox.height = height;
+}
+const getBox = {}
+const Settings = {
     setBox,
     getBox
 }
+
+export default Settings;
