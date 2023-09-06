@@ -1,4 +1,4 @@
-const vector = (x, y) => ({ x, y })
+export const Vector = (x, y) => ({ x, y })
 
 const add = (v1, v2) => vector(v1.x + v2.x, v1.y + v2.y)
 
@@ -17,8 +17,7 @@ const scalarComponent = (v1, v2) => dot(v1, v2) / magnitude(v1)
 
 const crossProduct = (v1, v2) => v1.x*v2.y - v1.y*v2.x
 
-export const Vector = {
-    vector,
+export const Operations = {
     add,
     subtract,
     scalarProduct,
