@@ -1,6 +1,12 @@
 import Settings from '../state/Settings'
 import Vector from '../structs/vector'
 
+/* Note:
+Set target point
+Calculate magnitude and projection
+Shift each web point to target point over 10 cycles
+*/
+
 const web = {
     top: 0,
     left: 0,

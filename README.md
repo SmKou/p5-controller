@@ -22,19 +22,9 @@ Container: logic and state management
 Component: display and presentation
 Structs: data structures
 
-### **Change imports, exports and component files and tests**
+### Web
 
-Component.js is just a sample. Rename it and use it to contain just the logic of a single component. Components can be seen as handlers of an object, feature, or state.
-
-Component.test.js is just a sample with a single test and describe. Each component should have a corresponding test file with the same name, but with an extension of .test.js, and the test file should only test the functionality of its corresponding component. Make sure you're importing what is needed for it to run.
-
-## **Features**
-
-To run the test suite, use the command ```npm run test``` in the terminal. You can also use ```npx jest```.
-
-To create the production ready code for your project, use the command ```npm run build``` in the terminal.
-
-To build and preview your project, use either ```npm run start``` or ```npm start``` in the terminal.
+A visual simulation of a quad expanding and shrinking, moving about the canvas. [Incomplete]
 
 ## **Rendering**
 
