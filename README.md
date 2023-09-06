@@ -18,6 +18,10 @@ By: Stella Marie
 
 ## **Description**
 
+Container: logic and state management
+Component: display and presentation
+Structs: data structures
+
 ### **Change imports, exports and component files and tests**
 
 Component.js is just a sample. Rename it and use it to contain just the logic of a single component. Components can be seen as handlers of an object, feature, or state.
