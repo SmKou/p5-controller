@@ -14,4 +14,15 @@ export function sketch(p) {
         p.background(255);
         Sketch.getSketch.render(p);
     }
+
+    if (Sketch.mousePressed) {
+        p.mousePressed = function () {
+            Sketch.mousePressed()
+        }
+    }
+    if (Sketch.mouseReleased) {
+        p.mouseReleased = function () {
+            Sketch.mouseReleased();
+        }
+    }
 }
